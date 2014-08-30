@@ -20,6 +20,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{uea-abntex2}[29/08/2014 v0.1 Modelo da Universidade do Estado do Amazonas baseado em abnTeX2]
 \usepackage[utf8]{inputenc} % Codificacao do
+
 % documento atual, isto é, dessa classe
 
 % para mais detalhes sobre as opções:
@@ -41,11 +42,15 @@
 \ProcessOptions\relax
 \LoadClass{abntex2}
 
-
 % Mudar fonte dos títulos para usar fontes com serif
 % olhar seção 6.1 de http://mirror.math.ku.edu/tex-archive/macros/latex/contrib/abntex2/doc/abntex2.pdf
 %\renewcommand{\ABNTEXchapterfont}{\fontfamily{ptm}\selectfont}
 \renewcommand{\ABNTEXchapterfont}{\fontfamily{ptm}\fontseries{b}\selectfont}
+\renewcommand{\ABNTEXchapterfontsize}{\Large}
+\renewcommand{\ABNTEXsectionfontsize}{\large}
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
+
 
 % Capa
 % ====
@@ -264,3 +269,13 @@
 
   \end{folhadeaprovacao}
 }
+
+%Formatação da chamda de Referências
+\renewcommand{\bibsection}{%
+\chapter*{\vspace*{2.4cm}\bibname}
+\bibmark
+\ifnobibintoc\else
+\phantomsection
+\addcontentsline{toc}{section}{\bibname}
+\fi
+\prebibhook}
