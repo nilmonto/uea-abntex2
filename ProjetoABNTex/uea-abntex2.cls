@@ -51,7 +51,6 @@
 \renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
 \renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
 
-
 % Capa
 % ====
 
@@ -275,7 +274,41 @@
 \chapter*{\vspace*{2.4cm}\bibname}
 \bibmark
 \ifnobibintoc\else
-\phantomsection
 \addcontentsline{toc}{section}{\bibname}
 \fi
 \prebibhook}
+
+
+%Formatacao do ToC
+% -----
+% Configuracoes do TOC
+% -----
+% nivel de profundidade
+\setsecnumdepth{subsubsection}
+\settocdepth{subsubsection}   %\maxtocdepth{subsubsection}
+
+% lista de ilustracoes
+\renewcommand{\cftfigurename}{\figurename\space} 
+\renewcommand*{\cftfigureaftersnum}{~~--}
+ 
+% lista de tabelas  
+\renewcommand{\cfttablename}{\tablename\space}
+\renewcommand*{\cfttableaftersnum}{~~--}	
+ 
+% fonte das partes e do capitulo do TOC
+\renewcommand{\tocheadstart}{\ABNTEXchapterfont}
+
+% leaders para os capitulos
+\renewcommand*{\cftchapterdotsep}{\cftdotsep}
+% -----
+
+% ---
+\renewcommand{\cftdot}{\textbf{.}}
+\renewcommand\cftsectionfont{\normalsize\bfseries}
+\renewcommand\cftsubsectionfont{\normalsize\textnormal}
+\renewcommand\cftsectionpagefont{\textbf}
+\renewcommand\cftsubsectionpagefont{\textbf}
+\renewcommand\cftparskip{0.08cm}
+\setlength\cftbeforesectionskip{0.2cm}
+
+% ---

@@ -34,7 +34,7 @@
 	oneside,			% para impressão em verso e anverso. Oposto a twoside
 	a4paper,			% tamanho do papel.
 	% -- opções da classe abntex2 --
-	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	chapter=TITLE,		% títulos de capítulos convetidos em letras maiúsculas 
 	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
 	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
 	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
@@ -43,6 +43,7 @@
 	french,				% idioma adicional para hifenização
 	spanish,			% idioma adicional para hifenização
 	brazil,				% o último idioma é o principal do documento
+	article,			% documento divido por sections
 	]{uea-abntex2}
 
 %\evensidemargin 0.5 cm
@@ -74,10 +75,12 @@
 % ---
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage{tocloft}
+\usepackage{parskip}
 
 % --- 
 % CONFIGURAÇÕES DE PACOTES
-% --- 
+% ---
 
 % ---
 % Configurações do pacote backref
@@ -131,9 +134,9 @@ Escola Superior de Tecnologia.}
 		pdfauthor={\@author},
     	pdfsubject={\imprimirpreambulo},
 	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{projeto de pesquisa}, 
-		colorlinks=true,       		% false: boxed links; true: colored links
-    	linkcolor=blue,          	% color of internal links
+		pdfkeywords={spda}{efeito corona}{descargas eletricas}, 
+		colorlinks=false,       		% false: boxed links; true: colored links
+   		linkcolor=black,          	% color of internal links
     	citecolor=blue,        		% color of links to bibliography
     	filecolor=magenta,      		% color of file links
 		urlcolor=blue,
@@ -230,112 +233,113 @@ Escola Superior de Tecnologia.}
 % ---
 % inserir o sumario
 % ---
-\pdfbookmark[0]{\contentsname}{toc}
+%\pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
-\cleardoublepage
+%\cleardoublepage
 % ---
 
 
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
-\textual
+\pagestyle{simple}
 
 % ----------------------------------------------------------
 % Introdução
 % ----------------------------------------------------------
-\chapter*[Introdução]{\vspace*{3.4cm}Introdução}
-\addcontentsline{toc}{chapter}{Introdução}
+\textual
+\newpage
 
-Este documento e seu código-fonte são exemplos de referência de uso da classe
-\textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento 
-exemplifica a elaboração de projetos de pesquisa produzidos
-conforme a ABNT NBR 15287:2011 \emph{Informação e documentação - Projeto de
-pesquisa - Apresentação}. 
+\chapter*{\vspace*{3.4cm}INTRODUÇÃO}
+\addcontentsline{toc}{section}{INTRODUÇÃO}
 
-A expressão ``Modelo canônico'' é utilizada para indicar que \abnTeX\ não é
-modelo específico de nenhuma universidade ou instituição, mas que implementa tão
-somente os requisitos das normas da ABNT. Uma lista completa das normas
-observadas pelo \abnTeX\ é apresentada em \citeonline{abntex2classe}.
-
-Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
-\url{http://abntex2.googlecode.com/}. Também fique livre para conhecer,
-estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
-modificados tenham seus nomes alterados e que os créditos sejam dados aos
-autores originais, nos termos da ``The \LaTeX\ Project Public
-License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
-
-Encorajamos que sejam realizadas customizações específicas deste exemplo para
-universidades e outras instituições --- como capas, folhas de rosto, etc.
-Porém, recomendamos que ao invés de se alterar diretamente os arquivos do
-\abnTeX, distribua-se arquivos com as respectivas customizações.
-Isso permite que futuras versões do \abnTeX~não se tornem automaticamente
-incompatíveis com as customizações promovidas. Consulte
-\citeonline{abntex2-wiki-como-customizar} par mais informações.
-
-Este documento deve ser utilizado como complemento dos manuais do \abnTeX\ 
-\cite{abntex2classe,abntex2cite,abntex2cite-alf} e da classe \textsf{memoir}
-\cite{memoir}. Consulte \citeonline{abntex2modelo} para obter
-exemplos e informações adicionais de uso de \abnTeX\ e de \LaTeX.
-
-Esperamos, sinceramente, que o \abnTeX\ aprimore a qualidade do trabalho que
-você produzirá, de modo que o principal esforço seja concentrado no principal:
-na contribuição científica.
-
-Equipe \abnTeX 
-
-Lauro César Araujo
-
+Conteudo da Introducao..
 % ----------------------------------------------------------
 % Capitulo de textual  
 % ----------------------------------------------------------
-\chapter{Elementos textuais}
+\newpage
+\chapter*{\vspace*{3.4cm}PROJETO DE PESQUISA}
 
-\index{elementos textuais}A norma ABNT NBR 15287:2011, p. 5, apresenta a
-seguinte orientação quanto aos elementos textuais:
+\vspace{24pt}
+\section{TEMA}
 
-\begin{citacao}
-O texto deve ser constituído de uma parte introdutória, na qual devem ser
-expostos o tema do projeto, o problema a ser abordado, a(s) hipótese(s),
-quando couber(em), bem como o(s) objetivo(s) a ser(em) atingido(s) e a(s)
-justificativa(s). É necessário que sejam indicados o referencial teórico que
-o embasa, a metodologia a ser utilizada, assim como os recursos e o cronograma
-necessários à sua consecução.
-\end{citacao}
+\section{FORMULAÇÃO DO PROBLEMA}
 
-Consulte as demais normas da série ``Informação e documentação'' da ABNT
-para outras informações. Uma lista com as principais normas dessa série, todas
-observadas pelo \abnTeX, é apresentada em \citeonline{abntex2classe}.
+\section{HIPÓTESE}
 
-% ----------------------------------------------------------
-% Capitulo com exemplos de comandos inseridos de arquivo externo 
-% ----------------------------------------------------------
+\section{OBJETIVO}
 
-\include{abntex2-modelo-include-comandos}
+\section{JUSTIFICATIVA}
 
-% ---
-% Finaliza a parte no bookmark do PDF
-% para que se inicie o bookmark na raiz
-% e adiciona espaço de parte no Sumário
-% ---
-\phantompart
+\section{REFERENCIAL TEÓRICO}
 
-% ---
-% Conclusão
-% ---
-\chapter*[Considerações finais]{Considerações finais}
-\addcontentsline{toc}{chapter}{Considerações finais}
+\subsection{DISTRIBUIÇÃO DE ENERGIA ELÉTRICA}
 
-\lipsum[31-33]
+\subsection{A INFLUÊNCIA DE HARMÔNICOS}
 
-% ----------------------------------------------------------
-% ELEMENTOS PÓS-TEXTUAIS
-% ----------------------------------------------------------
+\subsection{MEDIÇÃO DE HARMÔNICOS}
+
+\subsection{MICROCONTROLADORES ARM}
+
+\subsection{SISTEMA OPERACIONAL LINUX EMBARCADO}
+
+\section{METODOLOGIA}
+
+\hspace*{0.8cm}O trabalho a ser apresentado será uma pesquisa aplicada, e terá como objetivo a realização de pesquisa exploratória sobre o material bibliográfico e de laboratório sobre o assunto. Será utilizado o procedimento técnico de pesquisa bibliográfica. Também será utilizado o método de abordagem hipotético-dedutivo e o método de procedimento monográfico em sua elaboração. Para a coleta de dados será utilizada documentação indireta e a análise e interpretação dos dados qualitativos ocorrerá globalmente.
+
+Serão feitas pesquisas bibliográficas na área de sistemas microprocessados de alto desempenho, com foco na arquitetura ARM com sistema operacional Linux embarcado, bem como também programação orientada a objeto, com foco na linguagem C++ e programação orientada a blocos, com base na ferramenta de desenvolvimento Labview, um ambiente de desenvolvimento da National Instruments que auxilia na confecção de interfaces gráficas. Também serão feitas pesquisas bibliográficas a respeito de métodos numéricos e algoritmos de cálculo da transformada rápida de Fourier. Serão, por fim, feitas pesquisas sobre circuitos de condicionamento, aplicados na leitura de sinais da rede elétrica, bem como de circuitos integrados medidores de energia, que serão utilizados para a amostragem dos sinais da rede a ser medida.
+
+Pesquisas de campo serão aplicadas para coletar dados de redes de distribuição de energia elétrica, serão feitas, também, simulações computacionais e reais nas quais se buscará avaliar a confiabilidade dos algoritmos testados, bem como determinar o mais adequado às limitações inerentes à plataforma de trabalho disponível.
+
+A construção do Sistema será dividida em duas etapas: A primeira etapa será a implementação dos algoritmos de cálculo de FFT, no Matlab, e comparação do desempenho e resposta dos mesmos com relação a blocos já prontos e disponíveis no referido software de simulação. Este método servirá como base de teste para a escolha do algoritmo de cálculo mais eficiente, em termos de processamento e exatidão.
+
+A segunda etapa será a implementação de um protótipo utilizando do chip ADE7758, um circuito integrado medidor de energia e parâmetros elétricos trifásicos, para a aquisição das formas de onda de tensão e corrente, de tal modo que se possa implementar o algoritmo de cálculo de melhor desempenho em linguagem C++ em uma plataforma com sistema operacional Linux embarcado e comparar sua resposta com medidores comerciais utilizando uma interface de aquisição desenvolvida com o auxílio do software Labview.
+
+Os resultados obtidos, bem como o algoritmo escolhido, ao final do projeto de pesquisa poderão ser incorporados a uma plataforma comercial de análise de rede elétrica utilizada no gerenciamento de transformadores de distribuição de energia elétrica, uma vez que os referidos recursos encontrem-se suficientemente testados em termos de eficiência e confiabilidade.
+
+\newpage
+
+\section{CRONOGRAMA}
+
+As atividades de desenvolvimento do projeto seguirão o seguinte cronograma:
+%\newpage
+\begin{table}[h]\centering
+\caption{Cronograma de atividades}
+\begin{tabular}{|c|p{4cm}|c|c|c|c|c|c|c|c|r|}
+\hline
+\textbf{Item} & \textbf{Atividade} & \textbf{Abr} & \textbf{Mai} & \textbf{Jun} & \textbf{Jul} & \textbf{Ago} & \textbf{Set} & \textbf{Out} & \textbf{Nov} & \textbf{Dez} \\\hline \hline
+1 & Escolha do Professor Orientador & X & & & & & & & & \\\hline
+2 & Definição do Tema & & X & & & & & & & \\\hline
+3 & Estudo sobre equipamentos de medição & & X & X & & & & & & \\\hline
+4 & Coleta de Informações do projeto de pesquisa & & X & X & & & & & & \\\hline
+5 & Tratamento das Informações coletadas & & & X & & & & & & \\\hline
+6 & Elaboração do projeto de pesquisa & & & X & X & & & & & \\\hline
+7 & Revisão do Texto do Projeto de Pesquisa & & & & X & & & & & \\\hline
+8 & Elaboração da Apresentação & & & & X & & & & & \\\hline
+9 & Apresentação do Projeto de Pesquisa & & & & X & & & & & \\\hline
+10 & Escolha plataforma ARM & & & & & X & & & & \\\hline
+11 & Análise de Dados de uma Rede Elétrica & & & & & X & X & & & \\\hline
+12 & Comparação de Resultados de Cálculo & & & & & & X & & & \\\hline
+13 & Elaboração textual da Pesquisa & & & & & & X & X & & \\\hline
+14 & Revisão textual da pesquisa & & & & & & & X & & \\\hline
+15 & Correções Textuais & & & & & & & & X & \\\hline
+16 & Entrega da versão final da Pesquisa & & & & & & & & & X \\\hline
+17 & Elaboração da Apresentação & & & & & & & & & X \\\hline
+18 & Apresentação da Pesquisa & & & & & & & & & X \\\hline
+
+\end{tabular}
+\end{table}
+
+%
 \postextual
 
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
+% Uncomment the following two lines if you want to have a bibliography. Please do not forget to add an entry to your bibliography and reference it by using the \cite{} command
+\newpage
+\vspace*{2.3cm}
+\renewcommand{\bibname}{REFERÊNCIAS}
 \bibliography{abntex2-modelo-references}
 
 % ----------------------------------------------------------
@@ -350,69 +354,14 @@ observadas pelo \abnTeX, é apresentada em \citeonline{abntex2classe}.
 % Apêndices
 % ----------------------------------------------------------
 
-% ---
-% Inicia os apêndices
-% ---
-\begin{apendicesenv}
-
-% Imprime uma página indicando o início dos apêndices
-\partapendices
-
-% ----------------------------------------------------------
-\chapter{Quisque libero justo}
-% ----------------------------------------------------------
-
-\lipsum[50]
-
-% ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% ----------------------------------------------------------
-\lipsum[55-57]
-
-\end{apendicesenv}
-% ---
-
 
 % ----------------------------------------------------------
 % Anexos
 % ----------------------------------------------------------
 
-% ---
-% Inicia os anexos
-% ---
-\begin{anexosenv}
-
-% Imprime uma página indicando o início dos anexos
-\partanexos
-
-% ---
-\chapter{Morbi ultrices rutrum lorem.}
-% ---
-\lipsum[30]
-
-% ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
-% ---
-
-\lipsum[31]
-
-% ---
-\chapter{Fusce facilisis lacinia dui}
-% ---
-
-\lipsum[32]
-
-\end{anexosenv}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
 %---------------------------------------------------------------------
-
-\phantompart
-
-\printindex
-
 
 \end{document}
