@@ -103,7 +103,7 @@
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 \titulo{SISTEMAS DE PROTEÇÃO CONTRA DESCARGAS ATMOSFÉRICAS}
-\autor{NILSON MONTEIRO DE OLIVEIRA}
+\autor{FULANO DE TAL}
 \local{Manaus}
 \data{2014}
 \instituicao{%
@@ -271,9 +271,24 @@ Conteudo da Introducao..
 
 \section{JUSTIFICATIVA}
 
+\subsection{Justificativa Acadêmica}
+
+\subsection{Justificativa Social}
+
 \section{REFERENCIAL TEÓRICO}
 
 \subsection{DISTRIBUIÇÃO DE ENERGIA ELÉTRICA}
+\hspace*{0.8cm}O módulo 8 dos Procedimentos de Distribuição de Energia Elétrica
+do Sistema Elétrico Nacional, PRODIST, obriga as concessionárias a medir e
+controlar parâmetros referentes à qualidade da energia elétrica \cite{PRODIST}.
+Desta forma, alguns dos diversos parâmetros de qualidade de energia que devem
+ser mensurados são o nível de tensão, que deve ser mantido entre um máximo e um
+mínimo e a continuidadeade do serviço, através dos parâmetros DEC (Duração
+Equivalente por Consumidor) e FEC (Frequência Equivalente de Interrupção),
+respectivamente. Entretanto, outros dois parâmetros são alvo de avaliação e
+controle no sistema de distribuição: Forma de Onda e Simetria do Sinal, sendo
+representados pelo indicador Taxa de Distorção Harmônica ou THD (\textit{Total
+Harmonic Distortion}) dos sinais de tensão e corrente.
 
 \subsection{A INFLUÊNCIA DE HARMÔNICOS}
 
@@ -285,9 +300,7 @@ Conteudo da Introducao..
 
 \section{METODOLOGIA}
 
-\hspace*{0.8cm}O trabalho a ser apresentado será uma pesquisa aplicada, e terá como objetivo a realização de pesquisa exploratória sobre o material bibliográfico e de laboratório sobre o assunto. Será utilizado o procedimento técnico de pesquisa bibliográfica. Também será utilizado o método de abordagem hipotético-dedutivo e o método de procedimento monográfico em sua elaboração. Para a coleta de dados será utilizada documentação indireta e a análise e interpretação dos dados qualitativos ocorrerá globalmente.
-
-Serão feitas pesquisas bibliográficas na área de sistemas microprocessados de alto desempenho, com foco na arquitetura ARM com sistema operacional Linux embarcado, bem como também programação orientada a objeto, com foco na linguagem C++ e programação orientada a blocos, com base na ferramenta de desenvolvimento Labview, um ambiente de desenvolvimento da National Instruments que auxilia na confecção de interfaces gráficas. Também serão feitas pesquisas bibliográficas a respeito de métodos numéricos e algoritmos de cálculo da transformada rápida de Fourier. Serão, por fim, feitas pesquisas sobre circuitos de condicionamento, aplicados na leitura de sinais da rede elétrica, bem como de circuitos integrados medidores de energia, que serão utilizados para a amostragem dos sinais da rede a ser medida.
+\hspace*{0.8cm}Serão feitas pesquisas bibliográficas na área de sistemas microprocessados de alto desempenho, com foco na arquitetura ARM com sistema operacional Linux embarcado, bem como também programação orientada a objeto, com foco na linguagem C++ e programação orientada a blocos, com base na ferramenta de desenvolvimento Labview, um ambiente de desenvolvimento da National Instruments que auxilia na confecção de interfaces gráficas. Também serão feitas pesquisas bibliográficas a respeito de métodos numéricos e algoritmos de cálculo da transformada rápida de Fourier. Serão, por fim, feitas pesquisas sobre circuitos de condicionamento, aplicados na leitura de sinais da rede elétrica, bem como de circuitos integrados medidores de energia, que serão utilizados para a amostragem dos sinais da rede a ser medida.
 
 Pesquisas de campo serão aplicadas para coletar dados de redes de distribuição de energia elétrica, serão feitas, também, simulações computacionais e reais nas quais se buscará avaliar a confiabilidade dos algoritmos testados, bem como determinar o mais adequado às limitações inerentes à plataforma de trabalho disponível.
 
@@ -296,6 +309,7 @@ A construção do Sistema será dividida em duas etapas: A primeira etapa será 
 A segunda etapa será a implementação de um protótipo utilizando do chip ADE7758, um circuito integrado medidor de energia e parâmetros elétricos trifásicos, para a aquisição das formas de onda de tensão e corrente, de tal modo que se possa implementar o algoritmo de cálculo de melhor desempenho em linguagem C++ em uma plataforma com sistema operacional Linux embarcado e comparar sua resposta com medidores comerciais utilizando uma interface de aquisição desenvolvida com o auxílio do software Labview.
 
 Os resultados obtidos, bem como o algoritmo escolhido, ao final do projeto de pesquisa poderão ser incorporados a uma plataforma comercial de análise de rede elétrica utilizada no gerenciamento de transformadores de distribuição de energia elétrica, uma vez que os referidos recursos encontrem-se suficientemente testados em termos de eficiência e confiabilidade.
+
 
 \newpage
 
@@ -331,7 +345,6 @@ As atividades de desenvolvimento do projeto seguirão o seguinte cronograma:
 \end{table}
 
 %
-\postextual
 
 % ----------------------------------------------------------
 % Referências bibliográficas
@@ -340,6 +353,7 @@ As atividades de desenvolvimento do projeto seguirão o seguinte cronograma:
 \newpage
 \vspace*{2.3cm}
 \renewcommand{\bibname}{REFERÊNCIAS}
+%\addcontentsline{toc}{section}{REFERÊNCIAS}
 \bibliography{abntex2-modelo-references}
 
 % ----------------------------------------------------------
